@@ -1,0 +1,14 @@
+export { ReactComponent as CheckSvg } from './check-icon.svg';
+export { ReactComponent as GeneralDetailSvg } from './general-details-icon.svg';
+export { ReactComponent as IntroductionSvg } from './general-details-icon.svg';
+export { ReactComponent as StructureTypeSvg } from './structure-type-icon.svg';
+export { ReactComponent as SuccessSvg } from './success-icon.svg';
+export { ReactComponent as AccNumPrimarySquareSvg } from './account-number-primary-square.svg';
+export { ReactComponent as CallPrimarySquareSvg } from './call-primary-square.svg';
+export { ReactComponent as BankPrimarySquareSvg } from './bank-primary-square.svg';
+export { ReactComponent as CityPrimarySquareSvg } from './city-primary-square.svg';
+export { ReactComponent as DistrictPrimarySquareSvg } from './district-primary-square.svg';
+export { ReactComponent as LocationPrimarySquareSvg } from './location-primary-square.svg';
+export { ReactComponent as MessagePrimarySquareSvg } from './message-primary-square.svg';
+export { ReactComponent as SharePrimarySquareSvg } from './share-primary-square.svg';
+export { ReactComponent as WorldPrimarySquareSvg } from './world-primary-square.svg';

@@ -1,0 +1,75 @@
+import { deleteRequest, getRequest, postRequest, putRequest } from "utils/helpers/common/http-methods";
+import { AcademicSectionDTO } from "utils/helpers/models/academics/academic-section.dto";
+import { AcademicSessionDTO } from "utils/helpers/models/academics/academic-session.dto";
+import { AcademicStatusDTO } from "utils/helpers/models/academics/academic-status.dto";
+import { CourseTypeDTO } from "utils/helpers/models/academics/course-type.dto";
+import { GradeTemplateDTO } from "utils/helpers/models/academics/grade-template.dto";
+import { LetterGradeDTO } from "utils/helpers/models/academics/letter-grade.dto";
+import { PlanOfStudyDTO } from "utils/helpers/models/academics/plan-of-study.dto";
+import { StudentSpecializationDTO } from "utils/helpers/models/academics/student-specialization.dto";
+import { StudentStatusDTO } from "utils/helpers/models/academics/student-status.dto";
+import { TemplateCourseDTO } from "utils/helpers/models/academics/template-course.dto";
+
+export const ACADEMICS_APIS = {
+    createLetterGrade: (body: LetterGradeDTO) => postRequest(`admin/letter/grade`, body),
+    updateLetterGrade: (id: number, body: LetterGradeDTO) => putRequest(`admin/letter/grade/${id}`, body),
+    getLetterGrades: (params: any) => getRequest(`admin/letter/grade`, params),
+    getLetterGradeById: (id: number) => getRequest(`admin/letter/grade/${id}`),
+    deleteLetterGradeById: (id: number) => deleteRequest(`admin/letter/grade/${id}`),
+    createCourseType: (body: CourseTypeDTO) => postRequest(`admin/academic/course_type`, body),
+    updateCourseType: (id: number, body: CourseTypeDTO) => putRequest(`admin/academic/course_type/${id}`, body),
+    getCourseTypes: (params: any) => getRequest(`admin/academic/course_type`, params),
+    getCourseTypeById: (id: number) => getRequest(`admin/academic/course_type/${id}`),
+    deleteCourseType: (id: number) => deleteRequest(`admin/academic/course_type/${id}`),
+    createTeachersTitle: (body: CourseTypeDTO) => postRequest(`admin/teachers/titles`, body),
+    updateTeachersTitle: (id: number, body: CourseTypeDTO) => putRequest(`admin/teachers/titles/${id}`, body),
+    getTeachersTitles: (params: any) => getRequest(`admin/teachers/titles`, params),
+    getTeachersTitleById: (id: number) => getRequest(`admin/teachers/titles/${id}`),
+    deleteTeachersTitle: (id: number) => deleteRequest(`admin/teachers/titles/${id}`),
+    createTemplateCourse: (body: TemplateCourseDTO) => postRequest(`admin/template/courses`, body),
+    updateTemplateCourse: (id: number, body: TemplateCourseDTO) => putRequest(`admin/template/courses/${id}`, body),
+    getTemplateCourses: (params: any) => getRequest(`admin/template/courses`, params),
+    getTemplateCourseById: (id: number) => getRequest(`admin/template/courses/${id}`),
+    deleteTemplateCourse: (id: number) => deleteRequest(`admin/template/courses/${id}`),
+    createGradeTemplate: (body: GradeTemplateDTO) => postRequest(`admin/grading/scheme/template`, body),
+    updateGradeTemplate: (id: number, body: GradeTemplateDTO) => putRequest(`admin/grading/scheme/template/${id}`, body),
+    getGradeTemplates: (params: any) => getRequest(`admin/grading/scheme/template`, params),
+    getGradeTemplateById: (id: number) => getRequest(`admin/grading/scheme/template/${id}`),
+    deleteGradeTemplate: (id: number) => deleteRequest(`admin/grading/scheme/template/${id}`),
+    createAcademicStatus: (body: AcademicStatusDTO) => postRequest(`admin/academic/status`, body),
+    updateAcademicStatus: (id: number, body: AcademicStatusDTO) => putRequest(`admin/academic/status/${id}`, body),
+    getAcademicStatuses: (params: any) => getRequest(`admin/academic/status`, params),
+    getAcademicStatusById: (id: number) => getRequest(`admin/academic/status/${id}`),
+    deleteAcademicStatus: (id: number) => deleteRequest(`admin/academic/status/${id}`),
+    createStudentStatus: (body: StudentStatusDTO) => postRequest(`admin/student/status`, body),
+    updateStudentStatus: (id: number, body: StudentStatusDTO) => putRequest(`admin/student/status/${id}`, body),
+    getStudentStatuses: (params: any) => getRequest(`admin/student/status`, params),
+    getStudentStatusById: (id: number) => getRequest(`admin/student/status/${id}`),
+    deleteStudentStatus: (id: number) => deleteRequest(`aadmin/student/status/${id}`),
+    createAcademicSection: (body: AcademicSectionDTO) => postRequest(`admin/academic/sections`, body),
+    updateAcademicSection: (id: number, body: AcademicSectionDTO) => putRequest(`admin/academic/sections/${id}`, body),
+    getAcademicSections: (params: any) => getRequest(`admin/academic/sections`, params),
+    getAcademicSectionById: (id: number) => getRequest(`admin/academic/sections/${id}`),
+    deleteAcademicSection: (id: number) => deleteRequest(`admin/academic/sections/${id}`),
+    createStudentSpecialization: (body: StudentSpecializationDTO) => postRequest(`admin/academic/specializations`, body),
+    updateStudentSpecialization: (id: number, body: StudentSpecializationDTO) => putRequest(`admin/academic/specializations/${id}`, body),
+    getStudentSpecializations: (params: any) => getRequest(`admin/academic/specializations`, params),
+    getStudentSpecializationById: (id: number) => getRequest(`admin/academic/specializations/${id}`),
+    deleteStudentSpecialization: (id: number) => deleteRequest(`admin/academic/specializations/${id}`),
+    createAcademicSession: (body: AcademicSessionDTO) => postRequest(`admin/academic/academic_sessions`, body),
+    updateAcademicSession: (id: number, body: AcademicSessionDTO) => putRequest(`admin/academic/academic_sessions/${id}`, body),
+    getAcademicSessions: (params: any) => getRequest(`admin/academic/academic_sessions`, params),
+    getAcademicSessionById: (id: number) => getRequest(`admin/academic/academic_sessions/${id}`),
+    deleteAcademicSession: (id: number) => deleteRequest(`admin/academic/academic_sessions/${id}`),
+    createPlanOfStudy: (body: PlanOfStudyDTO) => postRequest(`admin/academic/plan_of_study`, body),
+    updatePlanOfStudy: (id: number, body: PlanOfStudyDTO) => putRequest(`admin/academic/plan_of_study/${id}`, body),
+    getPlanOfStudies: (params: any) => getRequest(`admin/academic/plan_of_study`, params),
+    getPlanOfStudyById: (id: number) => getRequest(`admin/academic/plan_of_study/${id}`),
+    deletePlanOfStudy: (id: number) => deleteRequest(`admin/academic/plan_of_study/${id}`),
+    getSessionAllocatedCourses: (params: any) => getRequest(`admin/allocation/courses`, params),
+    getTeachers: (params: any) => getRequest(`admin/teachers/list`, params),
+    addSessionCourse: (body: any) => postRequest(`admin/academic/add_session_courses`, body),
+    addCourseTeacher: (body: any) => postRequest(`admin/academic/add_course_teacher`, body),
+    addCourseRoom: (body: any) => postRequest(`admin/academic/add_course_room`, body),
+    addCourseSection: (body: any) => postRequest(`admin/academic/add_course_section`, body),
+}
